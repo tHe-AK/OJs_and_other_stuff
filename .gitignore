@@ -1,3 +1,5 @@
 .idea/
 OJs.iml
-./src/test.java
+/src/test.java
+out/
+src/test.java
