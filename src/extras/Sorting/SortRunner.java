@@ -7,7 +7,9 @@ import java.util.Scanner;
 public class SortRunner {
     static BubbleSort bubbleSort = new BubbleSort(); // 1
     static SelectionSort selectionSort = new SelectionSort(); // 2
-    static MergeSort mergeSort = new MergeSort() ; // 3
+    static MergeSort mergeSort = new MergeSort(); // 3
+    static MergeSortInPlace mergeSortInPlace = new MergeSortInPlace(); // 4
+    static QuickSort quickSort = new QuickSort(); // 5
 
     static Map<Integer, Sorting> sortingAlgos=  new HashMap<Integer, Sorting>();
 
@@ -17,6 +19,8 @@ public class SortRunner {
         sortingAlgos.put(1, bubbleSort);
         sortingAlgos.put(2, selectionSort);
         sortingAlgos.put(3, mergeSort);
+        sortingAlgos.put(4, mergeSortInPlace);
+        sortingAlgos.put(5, quickSort);
 
         int[] arr;
         System.out.print("Enter the size of array to sort: ");

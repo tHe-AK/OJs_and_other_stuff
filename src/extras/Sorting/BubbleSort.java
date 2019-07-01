@@ -1,7 +1,7 @@
 package extras.Sorting;
 /*
     Bubble Sort:
-    bubbles the largest element to the end, and marks it sorted.
+    Bubbles the largest element to the end by continuously swapping each adjacent element pair if not in order.
  */
 public class BubbleSort extends Sorting{
 
@@ -9,15 +9,12 @@ public class BubbleSort extends Sorting{
     public void sort(int[] arrToSort) {
         int size = arrToSort.length;
 
-        for(int i=size-1; i>0; i--){ // loop ends at the start of sorted list(initially empty), with each iteration one element from the end added to the sorted list.
-            int largestElementIndex = i;
-
-            for(int j=i-1; j >=0; j--) { // starting from i+1, next element to already selected largestElement.
-                if (arrToSort[j] > arrToSort[largestElementIndex])
-                    largestElementIndex = j;
+        for(int i=0; i<size; i++){
+            for(int j=0; j < size-i-1; j++) { 
+                if (arrToSort[j] > arrToSort[j+1])
+                	swap(j+1, j, arrToSort); // swap elements if not in correct order.
             }
-            swap(largestElementIndex, i, arrToSort); // swap the largest with the end of the current unsorted list.
-            printIteration(arrToSort, Math.abs(i+1-size));
+            printIteration(arrToSort, i);
         }
         printSortedArray(arrToSort);
     }

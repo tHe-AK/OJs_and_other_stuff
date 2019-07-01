@@ -2,4 +2,7 @@
 OJs.iml
 /src/test.java
 out/
-src/test.java
+/.metadata/
+src/.classpath
+src/.project
+src/extras/Sorting/*.class
