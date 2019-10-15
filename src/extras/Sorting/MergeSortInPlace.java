@@ -13,8 +13,9 @@ public class MergeSortInPlace extends Sorting{
     	if(startIndex < lastIndex) {
     		int middle = (startIndex + lastIndex)/2;
     		mergeSort(arr, startIndex, middle);
-    		mergeSort(arr, middle + 1, lastIndex);
     		merge(arr, startIndex, middle, lastIndex);
+        mergeSort(arr, middle + 1, lastIndex);
+        merge(arr, startIndex, middle, lastIndex);
     	}
     }
     
